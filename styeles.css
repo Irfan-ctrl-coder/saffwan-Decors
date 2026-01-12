@@ -1,0 +1,210 @@
+ project pGE */
+
+/* PROJECTS PAGE */
+
+.projects-page {
+  background: #0d0d0d;
+  padding: 120px 0;
+}
+
+/* INTRO */
+.projects-intro {
+  margin-bottom: 60px;
+}
+
+.projects-intro h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+/* GRID */
+.projects-grid-50 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* CARD */
+.project-card {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* IMAGE & VIDEO */
+.project-card img,
+.project-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+/* HOVER OVERLAY */
+.project-hover {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 36px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* TEXT */
+.project-hover h4 {
+  font-size: 1.1rem;
+  letter-spacing: 0.6px;
+  margin-bottom: 6px;
+}
+
+.project-hover span {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  letter-spacing: 0.4px;
+}
+
+/* HOVER EFFECTS */
+.project-card:hover img,
+.project-card:hover video {
+  transform: scale(1.05);
+}
+
+.project-card:hover .project-hover {
+  opacity: 1;
+}
+
+/* PROJECTS HERO */
+.projects-hero {
+  background: #0d0d0d;
+  padding: 120px 0 60px; /* More top padding for spacing */
+  text-align: center;
+}
+
+.projects-hero .gold-text {
+  font-size: 3rem; /* Larger, prominent */
+  margin-bottom: 20px;
+  color: #d4af37; /* Gold */
+}
+
+.projects-hero .hero-subtext {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.75);
+  max-width: 700px;
+  margin: 0 auto; /* Centered */
+  line-height: 1.6;
+}
+
+/* FEATURED PROJECTS */
+.featured-projects {
+  background: #0d0d0d;
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.featured-project {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.featured-project img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Keeps aspect ratio without zooming too much */
+  transition: transform 0.6s ease;
+}
+
+.featured-project:hover img {
+  transform: scale(1.05);
+}
+
+.featured-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+  padding: 20px;
+  color: #fff;
+}
+
+.featured-overlay h3 {
+  font-size: 1.2rem;
+  margin: 0 0 5px 0;
+}
+
+.featured-overlay p {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin: 0;
+}
+
+/* PROJECTS CTA */
+.projects-cta {
+  background: #0d0d0d;
+  padding: 100px 20px; /* More spacing top/bottom */
+  text-align: center;
+}
+
+.projects-cta .gold-text {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #d4af37;
+}
+
+.projects-cta p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* CTA BUTTON */
+.cta-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  color: #0d0d0d;
+  background: #d4af37;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.cta-btn:hover {
+  background: #b8952c;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .projects-cta .gold-text {
+    font-size: 2rem;
+  }
+
+  .projects-cta p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
